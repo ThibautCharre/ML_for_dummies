@@ -125,20 +125,20 @@ class DecisionTree:
             return self._traverse_tree(x, node.right)
 
 
-# Check if the model is good with the breast cancer dataset
-dataset = load_breast_cancer()
-X, y = dataset.data, dataset.target
-X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=1234)
-
-# Model prediction
-clf = DecisionTree()
-clf.fit(X_train, y_train)
-pred_clf = clf.predict(X_test)
-
-
-# Accuracy score
-def accuracy(y_pred, y_test):
-    return np.sum(y_pred == y_test) / len(y_test)
-
-
-print(f'Accuracy score is : {accuracy(pred_clf, y_test)}')
+# # Check if the model is good with the breast cancer dataset
+# dataset = load_breast_cancer()
+# X, y = dataset.data, dataset.target
+# X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=1234)
+#
+# # Model prediction
+# clf = DecisionTree()
+# clf.fit(X_train, y_train)
+# pred_clf = clf.predict(X_test)
+#
+#
+# # Accuracy score
+# def accuracy(y_pred, y_test):
+#     return np.sum(y_pred == y_test) / len(y_test)
+#
+#
+# print(f'Accuracy score is : {accuracy(pred_clf, y_test)}')
